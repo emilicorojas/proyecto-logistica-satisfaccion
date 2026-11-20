@@ -11,9 +11,9 @@ Proyecto integrador del Módulo I del Diplomado Métodos estadísticos y matemá
 
 | Archivo o carpeta | Qué contiene |
 |---|---|
-| `analisis_logistica_satisfaccion.ipynb` | El análisis completo: datos, limpieza, figuras e interpretaciones |
+| `analisis_logistica_satisfaccion.ipynb` | El análisis completo: datos, limpieza, figuras, interpretaciones y conclusiones |
 | `requirements.txt` | Versiones de las bibliotecas usadas |
-| `resultados/` | Las figuras que genera el notebook |
+| `resultados/` | Las 9 figuras que genera el notebook |
 | `.vscode/settings.json` | Hace que VS Code use el entorno `.venv` de esta carpeta |
 
 ## Cómo correrlo en VS Code
@@ -50,12 +50,16 @@ Se necesita Python 3.12, Git y VS Code con las extensiones **Python** y **Jupyte
 
 4. Abrir `analisis_logistica_satisfaccion.ipynb`, elegir el kernel `.venv` (arriba a la derecha) y ejecutar *Restart* y luego *Run All*.
 
-El notebook encuentra los datos solo: busca `work-at-olist-data/datasets` en esta carpeta y en las superiores, o en la ruta de la variable de entorno `OLIST_DATA_DIR`.
+El notebook encuentra los datos solo: busca `work-at-olist-data/datasets` o `data/raw` (con los dos CSV) en esta carpeta y en las superiores, o la ruta de la variable de entorno `OLIST_DATA_DIR`.
 
 ## Datos
 
 Se usan dos tablas del conjunto público de Olist ([work-at-olist-data](https://github.com/olist/work-at-olist-data), licencia MIT): `olist_orders_dataset.csv` y `olist_order_reviews_dataset.csv`. Los CSV no se modifican; versión utilizada: commit `d9e4980`.
 
+## Origen de esta versión
+
+Esta versión final une el análisis original del repositorio con la versión del equipo (*Proyecto_Satisfaccion_Olist_Para_Equipo_2026*). De esa versión se incorporaron: el uso de `review_answer_timestamp` para saber cuándo respondió el cliente, la comparación por tramos de 24 horas, el filtro de respuestas posteriores a la entrega como análisis de sensibilidad, la sensibilidad de Spearman a la regla de reseña y al quitar un mes, y varias decisiones de diseño de las figuras.
+
 ## Estado
 
-El análisis de las dos preguntas está completo, con ocho decisiones de limpieza documentadas en el notebook. Falta la sección final de conclusiones y el registro de contribuciones.
+El análisis de las dos preguntas está completo, con ocho decisiones de limpieza documentadas y una sección de conclusiones y limitaciones. Falta el registro de contribuciones.

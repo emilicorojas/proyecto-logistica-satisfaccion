@@ -8,3 +8,4 @@ __pycache__/
 
 # Datos de Olist: se obtienen clonando su repositorio (ver README)
 work-at-olist-data/
+data/raw/
